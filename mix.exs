@@ -3,30 +3,31 @@ defmodule ExrmSmartosGz.Mixfile do
 
   def project do
     [app: :exrm_smartos_gz,
-     version: "0.0.1",
+     version: "0.1.0",
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     description: description,
+     package: package,
      deps: deps]
   end
 
-  # Configuration for the OTP application
-  #
-  # Type "mix help compile.app" for more information
-  def application do
-    [applications: [:logger]]
+  defp deps do
+    [{:exrm, "> 0.0.0"}]
   end
 
-  # Dependencies can be Hex packages:
-  #
-  #   {:mydep, "~> 0.3.0"}
-  #
-  # Or git/path repositories:
-  #
-  #   {:mydep, git: "https://github.com/elixir-lang/mydep.git", tag: "0.1.0"}
-  #
-  # Type "mix help deps" for more examples and options
-  defp deps do
-    []
+  defp description do
+    """
+    Trying to package an Elixir application for a SmartOS GZ but getting errors about
+    ncurses? This will cure what ails you.
+    """
+  end
+
+  defp package do
+    [
+      maintainers: ["Adam Daniels"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/adam12/exrm_smartos_gz"}
+    ]
   end
 end
