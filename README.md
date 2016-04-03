@@ -1,20 +1,13 @@
-# ExrmSmartosGz
+# ExRM Plugin for Smartos global zone Releases
 
-**TODO: Add description**
+Trying to release an Elixir application for a SmartOS global zone but getting errors about
+ncurses? This will cure what ails you.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
-
-  1. Add exrm_smartos_gz to your list of dependencies in `mix.exs`:
+To use with exrm, simply add this project as a dependency:
 
         def deps do
-          [{:exrm_smartos_gz, "~> 0.0.1"}]
+          [{:exrm_smartos_gz, "~> 0.1.0", only: :dev}]
         end
-
-  2. Ensure exrm_smartos_gz is started before your application:
-
-        def application do
-          [applications: [:exrm_smartos_gz]]
-        end
-
+        
