@@ -8,6 +8,6 @@ ncurses? This will cure what ails you.
 To use with exrm, simply add this project as a dependency:
 
         def deps do
-          [{:exrm_smartos_gz, "~> 0.1.0", only: :dev}]
+          [{:exrm_smartos_gz, "~> 1.0.0", only: :dev}]
         end
         
