@@ -6,7 +6,7 @@ defmodule ReleaseManager.Plugin.SmartOSGZ do
   to the GNU lib folder that contains the ncurses library needed.
   """
 
-  @preload ~s(export LD_LIBRARY_PATH="/usr/gnu/lib/amd64" ### Added by exrm_smartos_gz)
+  @preload ~s(LD_LIBRARY_PATH="/usr/gnu/lib/amd64")
 
   use ReleaseManager.Plugin
   alias ReleaseManager.Config
